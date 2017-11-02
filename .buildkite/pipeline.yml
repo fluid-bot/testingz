@@ -1,6 +1,6 @@
 steps:
   - name: "Create VM"
-    command: "vagranttt up --provider virtualbox && npm install"
+    command: "vagrant up --provider virtualbox && npm install"
     timeout_in_minutes: 10
     env:
       DISPLAY: ":0"
@@ -15,7 +15,7 @@ steps:
     command: "vagrant ssh -c 'cd /home/vagrant/sync; grunt clean stylus modulefiles:all pathMap:all copy:all copy:necessities uglify:all concat:all compress:all'"
 
   - name: "Run tests"
-    command: "grunt tests"
+    command: "gruntttt tests"
 
   - name: "Destroy VM"
     command: "vagrant destroy -f"
