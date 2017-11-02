@@ -1,7 +1,4 @@
 steps:
-  - name: "Create VM"
-    command: "DISPLAY=:0 vagrant up --provider virtualbox && npm install"
-
   - name: "Install dependencies"
     command: "vagrant ssh -c 'cd /home/vagrant/sync; npm install'"
 
@@ -11,5 +8,3 @@ steps:
   - name: "Run tests"
     command: "grunt tests"
 
-  - name: "Destroy VM"
-    command: "vagrant destroy -f"
