@@ -1,0 +1,16 @@
+.settings
+.gitignore
+.npmignore
+.project
+.vagrant
+report.tap
+build/
+demos/
+examples/
+products/
+tests/component-tests/
+tests/framework-tests/
+tests/manual-tests/
+tests/node-tests/
+tests/test-core/testTests/
+tests/all-tests.html
