@@ -2,10 +2,8 @@ steps:
   - name: "Create VM"
     command: "vagrant up --provider virtualbox && npm install"
     timeout_in_minutes: 10
-    env:
-      DISPLAY: ":0"
 
-  # Wait and make sure the VM was successfully created before proceeding.
+  # Wait and make sure the VM was successfully created before proceeding. Otherwise the remaining steps will not run.
   - wait
 
   - name: "Install dependencies"
@@ -19,4 +17,3 @@ steps:
 
   - name: "Destroy VM"
     command: "vagrant destroy -f"
-
