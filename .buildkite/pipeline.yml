@@ -1,6 +1,6 @@
 steps:
   - name: "Create VM"
-    command: "vagrant up --provider virtualbox && npm install"
+    command: "DISPLAY=:0 vagrant up --provider virtualbox && npm install"
     timeout_in_minutes: 10
 
   # Wait and make sure the VM was successfully created before proceeding. Otherwise the remaining steps will not run.
